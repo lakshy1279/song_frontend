@@ -15,7 +15,7 @@ const Upload = (props) => {
   useEffect(() => {
     if (imagedata && videodata) {
       //console.log('hook',imagedata,videodata);
-      fetch("https://backendvideoplayer.herokuapp.com/upload", {
+      fetch("https://lakshy.herokuapp.com/upload", {
         method: "Post",
         headers: {
           "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const Upload = (props) => {
     data.append("file", image);
     //data.append("file",video)
     data.append("upload_preset", "instaClone");
-    data.append("cloud_name", "aditya-foundation");
+    data.append("cloud_name", "lakshy");
     fetch("https://api.cloudinary.com/v1_1/lakshy/image/upload", {
       method: "post",
       body: data,
@@ -67,7 +67,7 @@ const Upload = (props) => {
     //console.log("video",video)
     data.append("file", video);
     data.append("upload_preset", "instaClone");
-    data.append("cloud_name", "aditya-foundation");
+    data.append("cloud_name", "lakshy");
     fetch("https://api.cloudinary.com/v1_1/lakshy/video/upload", {
       method: "post",
       body: data,

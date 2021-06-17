@@ -17,7 +17,7 @@ class App extends Component {
     });
   }
   fetchData = async () => {
-    var data = await axios.get("https://backendvideoplayer.herokuapp.com/");
+    var data = await axios.get("https://lakshy.herokuapp.com/");
     await this.props.store.dispatch({ type: "fetch", data: data.data.posts });
     //console.log(this.props.store);
   };
